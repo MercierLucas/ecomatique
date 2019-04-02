@@ -5,14 +5,15 @@
 
 */
 
-if(isset($_GET['function']) || empty($_GET['function'])){
-    $function='accueil';
+if(isset($_GET['function']) || !empty($_GET['function'])){
+    $function=$_GET['function'];
 }
 else{
-    $function=$_GET['function'];
+    $function='accueil';
 }
 
 switch($function){
+    
     case 'accueil':
         $view='accueil';
         break;
@@ -29,7 +30,7 @@ switch($function){
         if(isset($_POST['mail']) && isset($_POST['mdp'])){
             // si un formulaire a ete post
         }
-        break;
+        break; 
 }
 
 include('Vues/'.$view.'.php');

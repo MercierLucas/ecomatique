@@ -4,7 +4,6 @@
 - Controleur lié aux utilisateurs (connexion,inscription ...): 
 
 */
-
 ?>
 
 <h1> C'est l'accueil -  TALHA</h1>
