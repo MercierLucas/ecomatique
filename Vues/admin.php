@@ -92,10 +92,11 @@
     				</div>
     				<div class="table-body">
     					<?php
-	    					for($i=0;$i<100;$i++){
-	    						$prenom='Lucas';
-	    						$nom='Mercier';
-	    						$role='Utilisateur';
+							$donnees=basicQuerry($bdd,'select * from utilisateurs');
+	    					for($i=0;$i<sizeof($donnees);$i++){
+	    						$prenom=$donnees[$i]['Prenom'];
+	    						$nom=$donnees[$i]['Nom'];
+	    						$role=$donnees[$i]['role'];
 								$btnEdit='<img src="Vues/Images/edit.png" alt="Editer" data-href="#modal-modif" class="admin_option dlg-edit js-modal">';
 								$btnContact='<img src="Vues/Images/contact.png" alt="Editer" data-href="#modal-msg" class="admin_option dlg-edit js-modal">';
 								$btnDel='<img src="Vues/Images/delete.png" alt="Editer" data-href="#modal-del" class="admin_option dlg-edit js-modal">';

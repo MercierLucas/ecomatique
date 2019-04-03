@@ -4,6 +4,7 @@
 - Controleur lié aux utilisateurs (connexion,inscription ...): 
 
 */
+include('Modeles/requetesUtilisateurs.php');
 
 if(isset($_GET['function']) || !empty($_GET['function'])){
     $function=$_GET['function'];
@@ -41,6 +42,7 @@ switch($function){
             $connexionSucces=TRUE;
             if($connexionSucces)
                 $view='admin';
+                
             else
                 $error="<div> Echec de l'authentification, veuillez vérifier vos informations.</div>";
         //}
