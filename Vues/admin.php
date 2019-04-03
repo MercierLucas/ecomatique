@@ -1,19 +1,9 @@
-<?php
-	session_start();
-	try {
-		$dbh = new PDO('mysql:host=localhost;dbname=ecomatique', 'root', '');
-	} catch (PDOException $e) {
-		print "Erreur !: " . $e->getMessage() . "<br/>";
-		die();
-	}
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title>Controle administrateur</title>
-        <link rel="stylesheet" type="text/css" href="master.css">
+        <link rel="stylesheet" type="text/css" href="Vues/master.css">
         <link href="https://fonts.googleapis.com/css?family=Quicksand|PT+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -106,9 +96,9 @@
 	    						$prenom='Lucas';
 	    						$nom='Mercier';
 	    						$role='Utilisateur';
-								$btnEdit='<img src="Images/edit.png" alt="Editer" data-href="#modal-modif" class="admin_option dlg-edit js-modal">';
-								$btnContact='<img src="Images/contact.png" alt="Editer" data-href="#modal-msg" class="admin_option dlg-edit js-modal">';
-								$btnDel='<img src="Images/delete.png" alt="Editer" data-href="#modal-del" class="admin_option dlg-edit js-modal">';
+								$btnEdit='<img src="Vues/Images/edit.png" alt="Editer" data-href="#modal-modif" class="admin_option dlg-edit js-modal">';
+								$btnContact='<img src="Vues/Images/contact.png" alt="Editer" data-href="#modal-msg" class="admin_option dlg-edit js-modal">';
+								$btnDel='<img src="Vues/Images/delete.png" alt="Editer" data-href="#modal-del" class="admin_option dlg-edit js-modal">';
 	    						echo '<div class="row">';
 	    						echo '<div class="cell">'.$i.'</div>'.'<div class="cell">'.$prenom.'</div>'.'<div class="cell">'.$nom.'</div>'.'<div class="cell">'.$role.'</div>'.'<div class="cell">'.$btnEdit.$btnContact.$btnDel.'</div>';
 	    						echo '</div>';
@@ -182,7 +172,7 @@
 
 
 
-<script src="app.js"></script>
+<script src="Vues/app.js"></script>
 
 
 </html>
